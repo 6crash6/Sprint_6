@@ -101,7 +101,6 @@ public class OrderPageParametrizeTest {
         assertTrue(mainOrderPage.success());
     }
 
-
     static Stream<Arguments> parameters(){
         return Stream.of(
                 Arguments.of("HEADER","Иванов","Иван","Питер",
@@ -111,7 +110,5 @@ public class OrderPageParametrizeTest {
         );
     }
 }
-
-
 
 

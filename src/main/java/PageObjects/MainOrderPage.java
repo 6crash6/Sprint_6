@@ -103,4 +103,3 @@ public void selectDate (int addDays){
         return text.contains("Заказ оформлен");
     }
 }
-
