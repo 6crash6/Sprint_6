@@ -1,4 +1,4 @@
-package PageObjects;
+package pageobjects;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -8,8 +8,15 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 
+import static pageobjects.MainPage.MAIN_PAGE_URL;
+
 public class OrderPage {
     private WebDriver driver;
+    public static String ORDER_PAGE_URL = MAIN_PAGE_URL + "order";
+    public OrderPage openOrderPage(){
+        driver.get(ORDER_PAGE_URL);
+        return this;
+    }
 
     //Имя
     private By name = By.xpath(".//input[@placeholder='* Имя']");

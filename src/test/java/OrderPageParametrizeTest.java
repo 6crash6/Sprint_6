@@ -1,6 +1,6 @@
-import PageObjects.MainOrderPage;
-import PageObjects.MainPage;
-import PageObjects.OrderPage;
+import pageobjects.MainOrderPage;
+import pageobjects.MainPage;
+import pageobjects.OrderPage;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
@@ -35,10 +35,10 @@ public class OrderPageParametrizeTest {
         options.addArguments("--start-maximized");
         driver = new ChromeDriver(options);
         wait = new WebDriverWait(driver, Duration.ofSeconds(3));
-        driver.get("https://qa-scooter.praktikum-services.ru/");
         mainPage = new MainPage(driver);
         orderPage = new OrderPage(driver);
         mainOrderPage = new MainOrderPage(driver);
+        mainPage.openMainPage();
         mainPage.clickCookieesButton();
     }
 

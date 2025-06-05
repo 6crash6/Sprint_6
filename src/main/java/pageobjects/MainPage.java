@@ -1,4 +1,4 @@
-package PageObjects;
+package pageobjects;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -7,6 +7,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
 
 public class MainPage {
+    public static String MAIN_PAGE_URL = "https://qa-scooter.praktikum-services.ru/";
     private final WebDriver driver;
 
     //Кнопка заказать сверху
@@ -29,6 +30,11 @@ public class MainPage {
 
     public MainPage (WebDriver driver){
         this.driver = driver;
+    }
+
+    public MainPage openMainPage(){
+        driver.get(MAIN_PAGE_URL);
+        return this;
     }
 
     public By getQuestions(int questionsIndex) {
